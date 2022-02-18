@@ -1,23 +1,8 @@
 ---
  - hosts: ALL
    become: true
-   vars_prompt:
-     - name: "date"
-       prompt: "enter patch date"
-       private: no
-     - name: "directory"
-       prompt: "enter directory name"
-       private: no
-     - name: "file"
-       prompt: "enter file name"
-       private: no
-     - name: "mode"
-       prompt: "enter mode name"
-       private: no
    tasks:
-     - name: creating a directory
-       file:
-         path: "/home/karthik/{{directory}}_{{date}}"
-         state: directory
-         mode: '{{mode}}'
-     - name: creating a file
+     - name: installing java
+       yum:
+         name: java
+         state: installed
