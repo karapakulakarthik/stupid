@@ -10,5 +10,4 @@
         dest: /root/karthik/
         clone: yes
         update: yes
-    tasks:
-      - ping
+   
