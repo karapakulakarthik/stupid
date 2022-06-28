@@ -1,5 +1,5 @@
 ---
- - hosts: 35.171.26.117
+ - hosts: localhost
    become: true
    vars_files:
      - vault.yml
