@@ -1,0 +1,12 @@
+---
+ - hosts: localhost
+   become: true
+   vars_files:
+     - vault.yml
+   tasks:
+    - name: Clone a github repository
+      git:
+        repo: '{{ gitclone }}'             
+        dest: /root/karthik/
+        clone: yes
+        update: yes
